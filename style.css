@@ -225,16 +225,33 @@ header {
     display: none;
 }
 
+header.scrolled {
+    background-color: #1B1C57;
+    width: 100%;
+    left: 0px;
+    height: 81px;
+    padding: 0px 0px;
+    transition: 0.2s ease-in all;
+}
+ 
+.navbar .logo .companyName.whiteName{
+    color: white;
+}
+
 @media only screen and (min-width:1024px) and (max-width:1320px) {
-    .leftContainer{
+    .leftContainer {
         width: 70%;
         padding-top: 7rem;
-        >.title,>.subTitle{
+
+        >.title,
+        >.subTitle {
             width: 65%;
         }
-        .search{
+
+        .search {
             width: 70%;
         }
+
         .ourPartner {
             >.ourPartnerImages {
                 width: 100%;
@@ -242,6 +259,7 @@ header {
             }
         }
     }
+
     .rightContainer img {
         width: 45%;
     }
@@ -404,6 +422,14 @@ header {
         transform: translate(-60%, -30%);
     }
 
+    header.scrolled{
+        height: 66px;
+    }
+
+    .navbar{
+        padding: 33px 10px;
+    }
+
     .signup {
         margin-left: 1rem;
     }
@@ -414,7 +440,7 @@ header {
     }
 
     .leftContainer {
-        padding-top: 9rem;
+        padding-top: 7rem;
         width: 100%;
         text-align: center;
 
@@ -438,6 +464,10 @@ header {
                 justify-content: center;
             }
         }
+
+        >.search {
+            margin: 32px auto;
+        }
     }
 
     .rightContainer img {
@@ -457,6 +487,7 @@ header {
 
             >button {
                 padding: 06px 08px;
+                width: 86px;
             }
         }
     }

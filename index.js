@@ -8,3 +8,16 @@ hamburger.addEventListener('click', function () {
     document.getElementById("menu-bg").classList.toggle("change-bg");
     document.body.style.overflow = 'hidden';
 });
+
+const navbar = document.getElementById('navbar');
+const companyName = document.querySelector('.companyName');
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 0) {
+    navbar.classList.add('scrolled');
+    companyName.classList.add('whiteName');
+  } else {
+    navbar.classList.remove('scrolled');
+    companyName.classList.remove('whiteName');
+  }
+});
