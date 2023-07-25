@@ -76,6 +76,10 @@ body {
     align-items: center;
 }
 
+.d-none{
+    display: none;
+}
+
 /* Utility Class Ends */
 
 /* Hero & Header Ends */
