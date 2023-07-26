@@ -28,12 +28,7 @@ let cardHouse = document.querySelectorAll('.cardHouse');
 for (let i = 0; i < categoryItems.length; i++) {
   categoryItems[i].addEventListener('click', (el) => {
     for (let i = 0; i < cardHouse.length; i++) {
-      if (el.currentTarget.className.includes(cardHouse[i].id)) {
-        cardHouse[i].className = 'cardHouse flex'
-      }
-      else {
-        cardHouse[i].className = 'cardHouse d-none flex'
-      }
+      el.currentTarget.className.includes(cardHouse[i].id) ? cardHouse[i].className = 'cardHouse flex' : cardHouse[i].className = 'cardHouse d-none flex'
     }
   });
 }
