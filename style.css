@@ -104,7 +104,7 @@ body {
 header {
     position: fixed;
     width: 100%;
-    z-index: 9;
+    z-index: 99;
 }
 
 .navbar {
@@ -256,7 +256,7 @@ header.scrolled {
     z-index: 99;
 }
 
-.navbar .logo .companyName.whiteName {
+.navbar .logo .companyName.change {
     color: white;
 }
 
