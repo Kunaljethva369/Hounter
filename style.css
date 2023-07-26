@@ -268,7 +268,8 @@ header.scrolled {
 }
 
 .ourrecommend,
-.readyToSell {
+.readyToSell,
+.tipstrick {
     margin-top: 5.5rem;
     padding-bottom: 2rem;
     position: relative;
@@ -447,23 +448,6 @@ header.scrolled {
     .cardsSectionowner {
         width: 70%;
 
-        .readySellBtn {
-            cursor: pointer;
-            padding: 12px;
-            background-color: #10B981;
-            border-radius: 32px;
-
-            >button {
-                background: none;
-                border: none;
-                color: white;
-
-                >span {
-                    margin-left: .4rem;
-                    color: white;
-                }
-            }
-        }
     }
 
     .cardsSectionOwnerName {
@@ -471,9 +455,130 @@ header.scrolled {
     }
 }
 
+.readySellBtn {
+    cursor: pointer;
+    padding: 12px;
+    background-color: #10B981;
+    border-radius: 32px;
+
+    >button {
+        background: none;
+        border: none;
+        color: white;
+
+        >span {
+            margin-left: .4rem;
+            color: white;
+        }
+    }
+}
+
 .readySellRight {
     width: 40%;
     z-index: 9;
+}
+
+.tipstrick {
+    .tipstrickLinear {
+        position: absolute;
+        top: -200px;
+
+        >img:last-child {
+            position: absolute;
+            top: 190px;
+        }
+    }
+
+    .ourrecommendUpHeader {
+        text-align: center;
+
+        >span {
+            padding-left: 0px;
+        }
+
+        >img {
+            margin: 0px auto;
+        }
+    }
+
+    .tipstrickTitle {
+        font-size: 32px;
+        font-weight: 600;
+        width: 40%;
+        margin: 0px auto;
+        text-align: center;
+        text-transform: capitalize;
+        color: #1B1C57;
+        margin-top: 16px;
+    }
+
+    .readySellBtn {
+        width: max-content;
+        margin: 32px auto;
+    }
+
+    .tipstrickcardsLeft {
+        width: 55%;
+        z-index: 9;
+
+        .tipscardItems {
+            margin-top: 2rem;
+
+            .innerTipsCard {
+                margin-left: 32px;
+
+                >p {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #1B1C57;
+                    width: 80%;
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+
+    .tipstrickcardright {
+        width: 45%;
+
+        .innerTipsCardRight {
+            margin-top: 24px;
+        }
+
+        .tipsdescription {
+            >p:first-child {
+                font-size: 24px;
+                margin-top: 14px;
+                color: #1B1C57;
+            }
+
+            >p:last-child {
+                font-size: 14px;
+                color: #626687;
+                margin-top: 14px;
+            }
+        }
+    }
+
+    .tipsdatetime,
+    .tipsdatetimeRight {
+        margin-top: 12px;
+
+        >span {
+            color: #888B97;
+            margin-left: 14px;
+            font-weight: 200;
+        }
+    }
+
+    .author {
+        >span {
+            font-size: 14px;
+            font-weight: 400;
+            color: #3C4563;
+            margin-left: 16px;
+        }
+    }
 }
 
 @media only screen and (min-width:1024px) and (max-width:1320px) {
@@ -561,6 +666,10 @@ header.scrolled {
                 width: 100%;
                 justify-content: center;
             }
+        }
+
+        .search {
+            margin: 32px 0px 0px auto;
         }
 
     }
@@ -660,8 +769,66 @@ header.scrolled {
         width: 90%;
         order: 0;
 
-        img {
+        >img {
             margin: 0px auto;
+        }
+    }
+
+    .tipstrick {
+        .tipstrickTitle {
+            font-size: 24px;
+            width: 100%;
+        }
+
+        .tipstrickcards {
+            flex-direction: column;
+
+            .tipstrickcardsLeft {
+                width: 100%;
+                order: 1;
+
+                .tipscardItems {
+                    text-align: center;
+
+                    >img {
+                        margin: 0px auto;
+                        margin-bottom: 1rem;
+                    }
+
+                    .innerTipsCard {
+                        margin-left: 0px;
+
+                        .author {
+                            justify-content: center;
+                        }
+
+                        >p {
+                            width: 100%;
+                        }
+
+                        .tipsdatetime {
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+
+            .tipstrickcardright {
+                width: 100%;
+                text-align: center;
+
+                >img {
+                    margin: 0px auto;
+                }
+
+                .author {
+                    justify-content: center;
+                }
+
+                .tipsdatetimeRight {
+                    justify-content: center;
+                }
+            }
         }
     }
 }
@@ -964,8 +1131,72 @@ header.scrolled {
         width: 100%;
         order: 0;
 
-        img {
+        >img {
             margin: 0px auto;
+        }
+    }
+
+    .tipstrickLinear {
+        display: none;
+    }
+
+    .tipstrick {
+        .tipstrickTitle {
+            font-size: 24px;
+            width: 100%;
+        }
+
+        .tipstrickcards {
+            flex-direction: column;
+
+            .tipstrickcardsLeft {
+                width: 100%;
+                order: 1;
+
+                .tipscardItems {
+                    display: block;
+                    text-align: center;
+
+                    >img {
+                        margin: 0px auto;
+                        margin-bottom: 1rem;
+                        width: 50%;
+                    }
+
+                    .innerTipsCard {
+                        margin-left: 0px;
+
+                        .author {
+                            justify-content: center;
+                        }
+
+                        >p {
+                            width: 100%;
+                        }
+
+                        .tipsdatetime {
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+
+            .tipstrickcardright {
+                width: 100%;
+                text-align: center;
+
+                >img {
+                    margin: 0px auto;
+                }
+
+                .author {
+                    justify-content: center;
+                }
+
+                .tipsdatetimeRight {
+                    justify-content: center;
+                }
+            }
         }
     }
 }

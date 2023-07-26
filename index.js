@@ -2,11 +2,16 @@ let hamburger = document.getElementById('hamburger');
 let menuItems = document.getElementById('menuItems');
 
 hamburger.addEventListener('click', function () {
-  menuItems.className == 'menu flex' ? menuItems.className = 'menu active flex' : menuItems.className = 'menu flex';
+  if (menuItems.className == 'menu flex') {
+    menuItems.className = 'menu active flex'
+    document.body.style.overflowY = 'hidden'
+  }
+  else {
+    menuItems.className = 'menu flex';
+    document.body.style.overflowY = 'scroll'
+  }
   document.getElementById("menu-bar").classList.toggle("change");
-  document.querySelector(".companyName").classList.toggle("change");
-  document.getElementById("menu-bg").classList.toggle("change-bg");
-  document.body.style.overflow = 'hidden';
+  document.querySelector(".companyName").classList.add("change");
 });
 
 const navbar = document.getElementById('navbar');
