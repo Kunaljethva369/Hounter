@@ -11,10 +11,10 @@ hamburger.addEventListener('click', function () {
     document.body.style.overflowY = 'scroll'
   }
   document.getElementById("menu-bar").classList.toggle("change");
-  if(window.pageYOffset > 0){
+  if (window.pageYOffset > 0) {
     document.querySelector(".companyName").classList.add("change");
   }
-  else{
+  else {
     document.querySelector(".companyName").classList.toggle("change");
   }
 });
@@ -54,3 +54,14 @@ for (let i = 0; i < categoryItems.length; i++) {
     toggleBackground(this);
   });
 }
+
+
+$(document).ready(function () {
+  $('.cardHouse').slick({
+    slidesToShow: 3,
+    dots: true,
+    centerMode: true,
+    prevArrow:'<button class="priv_arrow arrownBtn-1"><img src="/Assets/leftArrow.png"></button>',
+    nextArrow:'<button class="next_arrow arrownBtn-1"><img src="/Assets/rightArrow.svg"></button>',
+  });
+});

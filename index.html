@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css"></link>
+    
     <link rel="icon" href="/Assets/logo.svg">
 </head>
 
@@ -108,8 +111,8 @@
                             </div>
                         </div>
                         <div class="arrowBtn">
-                            <button class="arrownBtn-1"><img src="/Assets/leftArrow.png"></button>
-                            <button class="arrownBtn-1 active"><img src="/Assets/rightArrow.svg"></button>
+                            <button class="slick-prev slick-arrow arrownBtn-1"><img src="/Assets/leftArrow.png"></button>
+                            <button class="slick-next slick-arrow arrownBtn-1 active"><img src="/Assets/rightArrow.svg"></button>
                         </div>
                     </div>
                 </div>
@@ -117,34 +120,6 @@
             <div class="container-fluid">
                 <div class="cardHouse flex" id="house">
                     <div class="cards">
-                        <img src="/Assets/roseland.svg">
-                        <div class="cardsSection">
-                            <h2>Roselands House</h2>
-                            <p>$ 35.000.000</p>
-                            <div class="cardsSectionowner flex">
-                                <img src="/Assets/dianne.svg">
-                                <div class="cardsSectionOwnerName">
-                                    <h3>Dianne Russell</h3>
-                                    <h5>Manchester, Kentucky</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cards">
-                        <img src="/Assets/woodland.svg">
-                        <div class="cardsSection">
-                            <h2>Woodlandside</h2>
-                            <p>$ 20.000.000</p>
-                            <div class="cardsSectionowner flex">
-                                <img src="/Assets/robert.svg">
-                                <div class="cardsSectionOwnerName">
-                                    <h3>Robert Fox</h3>
-                                    <h5>Dr. San Jose, South Dakota</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cards">
                         <img src="/Assets/oldlight.svg">
                         <div class="cardsSection">
                             <h2>The Old Lighthouse</h2>
@@ -158,22 +133,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cards">
-                        <img src="/Assets/roseland.svg">
-                        <div class="cardsSection">
-                            <h2>Cosmo's House</h2>
-                            <p>$ 22.000.000</p>
-                            <div class="cardsSectionowner flex">
-                                <img src="/Assets/jenny.svg">
-                                <div class="cardsSectionOwnerName">
-                                    <h3>Jenny Wilson</h3>
-                                    <h5>Preston Rd. Inglewood, Maine 98380</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cardHouse d-none flex" id="villa">
                     <div class="cards">
                         <img src="/Assets/woodland.svg">
                         <div class="cardsSection">
@@ -205,6 +164,50 @@
                     <div class="cards">
                         <img src="/Assets/oldlight.svg">
                         <div class="cardsSection">
+                            <h2>Roselands House</h2>
+                            <p>$ 35.000.000</p>
+                            <div class="cardsSectionowner flex">
+                                <img src="/Assets/dianne.svg">
+                                <div class="cardsSectionOwnerName">
+                                    <h3>Dianne Russell</h3>
+                                    <h5>Manchester, Kentucky</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="cardVila d-none flex" id="villa">
+                    <div class="cards">
+                        <img src="/Assets/woodland.svg">
+                        <div class="cardsSection">
+                            <h2>Woodlandside</h2>
+                            <p>$ 20.000.000</p>
+                            <div class="cardsSectionowner flex">
+                                <img src="/Assets/robert.svg">
+                                <div class="cardsSectionOwnerName">
+                                    <h3>Robert Fox</h3>
+                                    <h5>Dr. San Jose, South Dakota</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <img src="/Assets/roseland.svg">
+                        <div class="cardsSection">
+                            <h2>Cosmo's House</h2>
+                            <p>$ 22.000.000</p>
+                            <div class="cardsSectionowner flex">
+                                <img src="/Assets/jenny.svg">
+                                <div class="cardsSectionOwnerName">
+                                    <h3>Jenny Wilson</h3>
+                                    <h5>Preston Rd. Inglewood, Maine 98380</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <img src="/Assets/oldlight.svg">
+                        <div class="cardsSection">
                             <h2>The Old Lighthouse</h2>
                             <p>$ 44.000.000</p>
                             <div class="cardsSectionowner flex">
@@ -231,7 +234,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cardHouse d-none flex" id="aparment">
+                <div class="cardAparments d-none flex" id="aparment">
                     <div class="cards">
                         <img src="/Assets/oldlight.svg">
                         <div class="cardsSection">
@@ -288,7 +291,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="readyToSell">
@@ -520,6 +523,8 @@
             </div>
         </div>
     </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
     <script src="/index.js"></script>
 </body>
 
