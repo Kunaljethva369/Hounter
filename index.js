@@ -11,7 +11,12 @@ hamburger.addEventListener('click', function () {
     document.body.style.overflowY = 'scroll'
   }
   document.getElementById("menu-bar").classList.toggle("change");
-  document.querySelector(".companyName").classList.add("change");
+  if(window.pageYOffset > 0){
+    document.querySelector(".companyName").classList.add("change");
+  }
+  else{
+    document.querySelector(".companyName").classList.toggle("change");
+  }
 });
 
 const navbar = document.getElementById('navbar');
