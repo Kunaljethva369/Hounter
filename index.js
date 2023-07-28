@@ -57,11 +57,45 @@ for (let i = 0; i < categoryItems.length; i++) {
 
 
 $(document).ready(function () {
-  $('.cardHouse').slick({
-    slidesToShow: 3,
+  $('.aboutUsCards').slick({
+    slidesToShow: 2,
     dots: true,
-    centerMode: true,
-    prevArrow:'<button class="priv_arrow arrownBtn-1"><img src="/Assets/leftArrow.png"></button>',
-    nextArrow:'<button class="next_arrow arrownBtn-1"><img src="/Assets/rightArrow.svg"></button>',
+    autoplay: true,
+    autoplaySpeed: 9000,
+    arrows: false,
+    responsive: [{
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+        infinite: false,
+        mobileFirst: true,
+      }
+    }, {
+      breakpoint: 767,
+      settings: {
+        slidesToShow:1,
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 1599,
+      settings: {
+        slidesToShow: 3.5,
+      }
+    }
+    ]
   });
 });
